@@ -1,0 +1,259 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Fitness Tracker API",
+    "version": "1.0.0",
+    "description": "API for managing users, workouts, exercises, and goals. Protected routes require OAuth login."
+  },
+  "servers": [
+    { "url": "https://your-render-url.onrender.com" }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get all users",
+        "responses": { "200": { "description": "List of users" } }
+      },
+      "post": {
+        "summary": "Create a new user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/User" }
+            }
+          }
+        },
+        "responses": { "201": { "description": "User created" }, "400": { "description": "Validation error" } }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "Get user by ID",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "User found" }, "404": { "description": "User not found" } }
+      },
+      "put": {
+        "summary": "Update user by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/User" }
+            }
+          }
+        },
+        "responses": { "204": { "description": "User updated" }, "404": { "description": "User not found" } }
+      },
+      "delete": {
+        "summary": "Delete user by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "204": { "description": "User deleted" }, "404": { "description": "User not found" } }
+      }
+    },
+    "/workouts": {
+      "get": {
+        "summary": "Get all workouts",
+        "responses": { "200": { "description": "List of workouts" } }
+      },
+      "post": {
+        "summary": "Create a new workout",
+        "security": [{ "cookieAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Workout" }
+            }
+          }
+        },
+        "responses": { "201": { "description": "Workout created" }, "400": { "description": "Validation error" } }
+      }
+    },
+    "/workouts/{id}": {
+      "get": {
+        "summary": "Get workout by ID",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Workout found" }, "404": { "description": "Workout not found" } }
+      },
+      "put": {
+        "summary": "Update workout by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Workout" }
+            }
+          }
+        },
+        "responses": { "204": { "description": "Workout updated" }, "404": { "description": "Workout not found" } }
+      },
+      "delete": {
+        "summary": "Delete workout by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "204": { "description": "Workout deleted" }, "404": { "description": "Workout not found" } }
+      }
+    },
+    "/exercises": {
+      "get": {
+        "summary": "Get all exercises",
+        "responses": { "200": { "description": "List of exercises" } }
+      },
+      "post": {
+        "summary": "Create a new exercise",
+        "security": [{ "cookieAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Exercise" }
+            }
+          }
+        },
+        "responses": { "201": { "description": "Exercise created" }, "400": { "description": "Validation error" } }
+      }
+    },
+    "/exercises/{id}": {
+      "get": {
+        "summary": "Get exercise by ID",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Exercise found" }, "404": { "description": "Exercise not found" } }
+      },
+      "put": {
+        "summary": "Update exercise by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Exercise" }
+            }
+          }
+        },
+        "responses": { "204": { "description": "Exercise updated" }, "404": { "description": "Exercise not found" } }
+      },
+      "delete": {
+        "summary": "Delete exercise by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "204": { "description": "Exercise deleted" }, "404": { "description": "Exercise not found" } }
+      }
+    },
+    "/goals": {
+      "get": {
+        "summary": "Get all goals",
+        "responses": { "200": { "description": "List of goals" } }
+      },
+      "post": {
+        "summary": "Create a new goal",
+        "security": [{ "cookieAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Goal" }
+            }
+          }
+        },
+        "responses": { "201": { "description": "Goal created" }, "400": { "description": "Validation error" } }
+      }
+    },
+    "/goals/{id}": {
+      "get": {
+        "summary": "Get goal by ID",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "Goal found" }, "404": { "description": "Goal not found" } }
+      },
+      "put": {
+        "summary": "Update goal by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Goal" }
+            }
+          }
+        },
+        "responses": { "204": { "description": "Goal updated" }, "404": { "description": "Goal not found" } }
+      },
+      "delete": {
+        "summary": "Delete goal by ID",
+        "security": [{ "cookieAuth": [] }],
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "204": { "description": "Goal deleted" }, "404": { "description": "Goal not found" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "required": ["name", "email", "age", "gender", "height", "weight", "joinedDate"],
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "age": { "type": "integer" },
+          "gender": { "type": "string" },
+          "height": { "type": "number" },
+          "weight": { "type": "number" },
+          "joinedDate": { "type": "string", "format": "date" }
+        }
+      },
+      "Workout": {
+        "type": "object",
+        "required": ["userId", "date", "type", "duration", "exercises", "notes", "caloriesBurned"],
+        "properties": {
+          "userId": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "type": { "type": "string" },
+          "duration": { "type": "number" },
+          "exercises": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" },
+          "caloriesBurned": { "type": "number" }
+        }
+      },
+      "Exercise": {
+        "type": "object",
+        "required": ["name", "muscleGroup", "equipment", "difficulty", "description", "userId", "date"],
+        "properties": {
+          "name": { "type": "string" },
+          "muscleGroup": { "type": "string" },
+          "equipment": { "type": "string" },
+          "difficulty": { "type": "string" },
+          "description": { "type": "string" },
+          "userId": { "type": "string" },
+          "date": { "type": "string", "format": "date" }
+        }
+      },
+      "Goal": {
+        "type": "object",
+        "required": ["userId", "target", "type", "startDate", "endDate", "status", "notes"],
+        "properties": {
+          "userId": { "type": "string" },
+          "target": { "type": "string" },
+          "type": { "type": "string" },
+          "startDate": { "type": "string", "format": "date" },
+          "endDate": { "type": "string", "format": "date" },
+          "status": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "securitySchemes": {
+      "cookieAuth": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "connect.sid"
+      }
+    }
+  }
+}
