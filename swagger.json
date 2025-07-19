@@ -6,7 +6,8 @@
     "description": "API for managing users, workouts, exercises, and goals. Protected routes require OAuth login."
   },
   "servers": [
-    { "url": "https://your-render-url.onrender.com" }
+    { "url": "https://cse341-project3.onrender.com/" },
+    { "url": "http://localhost:3000" }
   ],
   "paths": {
     "/users": {
