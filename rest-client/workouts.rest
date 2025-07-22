@@ -1,0 +1,104 @@
+### Get all workouts
+GET https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+### Get workout by ID
+GET https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+Content-Type: application/json
+
+### Create workout (requires authentication)
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-15",
+  "type": "strength",
+  "duration": 60,
+  "exercises": ["Push-ups", "Pull-ups", "Squats"],
+  "notes": "Great upper body workout, felt strong today",
+  "caloriesBurned": 350
+}
+
+### Create workout (requires authentication)
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-16",
+  "type": "cardio",
+  "duration": 45,
+  "exercises": ["Running", "Cycling"],
+  "notes": "Good cardio session, maintained steady pace",
+  "caloriesBurned": 420
+}
+
+### Create workout (requires authentication)
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-17",
+  "type": "mixed",
+  "duration": 75,
+  "exercises": ["Deadlift", "Bench Press", "Treadmill"],
+  "notes": "Combined strength and cardio training",
+  "caloriesBurned": 480
+}
+
+### Create workout (requires authentication)
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-18",
+  "type": "strength",
+  "duration": 50,
+  "exercises": ["Squats", "Lunges", "Planks"],
+  "notes": "Focused on lower body and core",
+  "caloriesBurned": 300
+}
+
+### Create workout (requires authentication)
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-19",
+  "type": "cardio",
+  "duration": 30,
+  "exercises": ["Burpees", "Mountain Climbers", "Jump Squats"],
+  "notes": "High intensity interval training",
+  "caloriesBurned": 380
+}
+
+### Update workout (requires authentication)
+PUT https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-15",
+  "type": "strength",
+  "duration": 75,
+  "exercises": ["Push-ups", "Pull-ups", "Squats", "Planks"],
+  "notes": "Extended workout with core exercises",
+  "caloriesBurned": 400
+}
+
+### Delete workout (requires authentication)
+DELETE https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+
+### Test validation error - missing required fields
+POST https://cse341-project3.onrender.com/workouts
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-15",
+  "type": "strength"
+}

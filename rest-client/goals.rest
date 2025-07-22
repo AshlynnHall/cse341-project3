@@ -1,0 +1,108 @@
+### Get all goals
+GET https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+### Get goal by ID 
+GET https://cse341-project3.onrender.com/goals/GOAL_ID_HERE
+Content-Type: application/json
+
+### Create goal (requires authentication)
+POST https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Lose 10 pounds",
+  "type": "weight_loss",
+  "startDate": "2025-01-15",
+  "endDate": "2025-04-15",
+  "status": "active",
+  "notes": "Focus on cardio and clean eating"
+}
+
+### Create goal (requires authentication)
+POST https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Bench press 200 lbs",
+  "type": "strength",
+  "startDate": "2025-01-15",
+  "endDate": "2025-06-15",
+  "status": "active",
+  "notes": "Progressive overload training plan"
+}
+
+### Create goal (requires authentication)
+POST https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Run 5K under 25 minutes",
+  "type": "endurance",
+  "startDate": "2025-01-15",
+  "endDate": "2025-03-15",
+  "status": "active",
+  "notes": "Training 3 times per week with interval runs"
+}
+
+### Create goal (requires authentication)
+POST https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Complete 30-day yoga challenge",
+  "type": "flexibility",
+  "startDate": "2025-01-18",
+  "endDate": "2025-02-17",
+  "status": "active",
+  "notes": "Daily yoga practice for flexibility and mindfulness"
+}
+
+### Create goal(requires authentication)
+POST https://cse341-project3.onrender.com/goals
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Gain 15 pounds of muscle",
+  "type": "weight_gain",
+  "startDate": "2025-01-15",
+  "endDate": "2025-07-15",
+  "status": "active",
+  "notes": "Focus on strength training and protein intake"
+}
+
+### Update goal (requires authentication)
+PUT https://cse341-project3.onrender.com/goals/GOAL_ID_HERE
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Lose 15 pounds",
+  "type": "weight_loss",
+  "startDate": "2025-01-15",
+  "endDate": "2025-05-15",
+  "status": "active",
+  "notes": "Updated goal with more ambitious target"
+}
+
+### Update goal status to completed (requires authentication)
+PUT https://cse341-project3.onrender.com/goals/GOAL_ID_HERE
+Content-Type: application/json
+
+{
+  "userId": "USER_ID_HERE",
+  "target": "Run 5K under 25 minutes",
+  "type": "endurance",
+  "startDate": "2025-01-15",
+  "endDate": "2025-03-15",
+  "status": "completed",
+  "notes": "Successfully completed the 5K goal!"
+}
+
+### Delete goal (requires authentication)
+DELETE https://cse341-project3.onrender.com/goals/GOAL_ID_HERE

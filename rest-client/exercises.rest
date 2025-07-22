@@ -1,0 +1,125 @@
+### Get all exercises
+GET https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+### Get exercise by ID 
+GET https://cse341-project3.onrender.com/exercises/EXERCISE_ID_HERE
+Content-Type: application/json
+
+### Create exercise (requires authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Push-ups",
+  "muscleGroup": "chest",
+  "equipment": "none",
+  "difficulty": "intermediate",
+  "description": "Standard push-up exercise targeting chest, shoulders, and triceps",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-15"
+}
+
+### Create exercise (requires authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Deadlift",
+  "muscleGroup": "back",
+  "equipment": "barbell",
+  "difficulty": "advanced",
+  "description": "Compound exercise targeting posterior chain muscles",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-16"
+}
+
+### Create exercise (requires authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Running",
+  "muscleGroup": "legs",
+  "equipment": "none",
+  "difficulty": "beginner",
+  "description": "Cardiovascular exercise for endurance and leg strength",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-17"
+}
+
+### Create exercise (requires authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Squats",
+  "muscleGroup": "legs",
+  "equipment": "none",
+  "difficulty": "intermediate",
+  "description": "Bodyweight squats for leg strength and mobility",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-18"
+}
+
+### Create exercise (requires authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Bench Press",
+  "muscleGroup": "chest",
+  "equipment": "barbell",
+  "difficulty": "advanced",
+  "description": "Classic chest exercise using barbell",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-19"
+}
+
+### Update exercise (requires authentication)
+PUT https://cse341-project3.onrender.com/exercises/EXERCISE_ID_HERE
+Content-Type: application/json
+
+{
+  "name": "Modified Push-ups",
+  "muscleGroup": "chest",
+  "equipment": "none",
+  "difficulty": "advanced",
+  "description": "Advanced push-up variation with elevated feet",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-17"
+}
+
+### Delete exercise (requires authentication)
+DELETE https://cse341-project3.onrender.com/exercises/EXERCISE_ID_HERE
+
+
+### Test unauthorized access (no authentication)
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Unauthorized Exercise",
+  "muscleGroup": "chest",
+  "equipment": "none",
+  "difficulty": "beginner",
+  "description": "This should fail without auth",
+  "userId": "USER_ID_HERE",
+  "date": "2025-01-15"
+}
+
+### Test validation error
+POST https://cse341-project3.onrender.com/exercises
+Content-Type: application/json
+
+{
+  "name": "Incomplete Exercise",
+  "muscleGroup": "chest"
+}
+
+### Test invalid exercise ID format
+GET https://cse341-project3.onrender.com/exercises/invalid-id-format
+
+### Test non-existent exercise
+GET https://cse341-project3.onrender.com/exercises/507f1f77bcf86cd799439011
+

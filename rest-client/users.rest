@@ -1,0 +1,82 @@
+### Get all users
+GET https://cse341-project3.onrender.com/users
+Content-Type: application/json
+
+### Get user by ID 
+GET https://cse341-project3.onrender.com/users/USER_ID_HERE
+Content-Type: application/json
+
+### Create a new user
+POST https://cse341-project3.onrender.com/users
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "email": "john.smith@example.com",
+  "age": 28,
+  "gender": "male",
+  "height": 180.5,
+  "weight": 75.2,
+  "joinedDate": "2025-01-15"
+}
+
+### Create a new user
+POST https://cse341-project3.onrender.com/users
+Content-Type: application/json
+
+{
+  "name": "Sarah Johnson",
+  "email": "sarah.johnson@example.com",
+  "age": 32,
+  "gender": "female",
+  "height": 165.0,
+  "weight": 58.5,
+  "joinedDate": "2025-01-10"
+}
+
+### Create a new user
+POST https://cse341-project3.onrender.com/users
+Content-Type: application/json
+
+{
+  "name": "Mike Wilson",
+  "email": "mike.wilson@example.com",
+  "age": 35,
+  "gender": "male",
+  "height": 175.0,
+  "weight": 82.0,
+  "joinedDate": "2025-01-08"
+}
+
+### Update user (requires authentication)
+PUT https://cse341-project3.onrender.com/users/USER_ID_HERE
+Content-Type: application/json
+
+{
+  "name": "John Smith Updated",
+  "email": "john.updated@example.com",
+  "age": 29,
+  "gender": "male",
+  "height": 181.0,
+  "weight": 74.0,
+  "joinedDate": "2025-01-15"
+}
+
+### Delete user (requires authentication)
+DELETE https://cse341-project3.onrender.com/users/USER_ID_HERE
+
+
+### Test validation error - missing required fields
+POST https://cse341-project3.onrender.com/users
+Content-Type: application/json
+
+{
+  "name": "Incomplete User",
+  "email": "incomplete@example.com"
+}
+
+### Test invalid ID format
+GET https://cse341-project3.onrender.com/users/invalid-id-format
+
+### Test non-existent user
+GET https://cse341-project3.onrender.com/users/507f1f77bcf86cd799439011

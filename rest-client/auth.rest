@@ -1,0 +1,16 @@
+
+### Check current authentication status
+GET https://cse341-project3.onrender.com/whoami
+Content-Type: application/json
+
+### Logout current user
+GET https://cse341-project3.onrender.com/logout
+
+
+### Access Swagger API Documentation
+GET https://cse341-project3.onrender.com/api-docs
+
+### Access main API endpoint
+GET https://cse341-project3.onrender.com/
+Content-Type: application/json
+
