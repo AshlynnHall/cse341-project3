@@ -3,7 +3,7 @@ GET https://cse341-project3.onrender.com/exercises
 Content-Type: application/json
 
 ### Get exercise by ID 
-GET https://cse341-project3.onrender.com/exercises/EXERCISE_ID_HERE
+GET https://cse341-project3.onrender.com/exercises/687c0d5610551d383d1bc7ab
 Content-Type: application/json
 
 ### Create exercise (requires authentication)
@@ -16,7 +16,7 @@ Content-Type: application/json
   "equipment": "none",
   "difficulty": "intermediate",
   "description": "Standard push-up exercise targeting chest, shoulders, and triceps",
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-15"
 }
 
@@ -30,36 +30,8 @@ Content-Type: application/json
   "equipment": "barbell",
   "difficulty": "advanced",
   "description": "Compound exercise targeting posterior chain muscles",
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-16"
-}
-
-### Create exercise (requires authentication)
-POST https://cse341-project3.onrender.com/exercises
-Content-Type: application/json
-
-{
-  "name": "Running",
-  "muscleGroup": "legs",
-  "equipment": "none",
-  "difficulty": "beginner",
-  "description": "Cardiovascular exercise for endurance and leg strength",
-  "userId": "USER_ID_HERE",
-  "date": "2025-01-17"
-}
-
-### Create exercise (requires authentication)
-POST https://cse341-project3.onrender.com/exercises
-Content-Type: application/json
-
-{
-  "name": "Squats",
-  "muscleGroup": "legs",
-  "equipment": "none",
-  "difficulty": "intermediate",
-  "description": "Bodyweight squats for leg strength and mobility",
-  "userId": "USER_ID_HERE",
-  "date": "2025-01-18"
 }
 
 ### Create exercise (requires authentication)
@@ -72,21 +44,21 @@ Content-Type: application/json
   "equipment": "barbell",
   "difficulty": "advanced",
   "description": "Classic chest exercise using barbell",
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-19"
 }
 
 ### Update exercise (requires authentication)
-PUT https://cse341-project3.onrender.com/exercises/EXERCISE_ID_HERE
+PUT https://cse341-project3.onrender.com/exercises/687c0d5610551d383d1bc7ab
 Content-Type: application/json
 
 {
-  "name": "Modified Push-ups",
-  "muscleGroup": "chest",
-  "equipment": "none",
+  "name": "Deadlift",
+  "muscleGroup": "back",
+  "equipment": "barbell",
   "difficulty": "advanced",
-  "description": "Advanced push-up variation with elevated feet",
-  "userId": "USER_ID_HERE",
+  "description": "Compound exercise targeting posterior chain muscles",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-17"
 }
 
@@ -104,7 +76,7 @@ Content-Type: application/json
   "equipment": "none",
   "difficulty": "beginner",
   "description": "This should fail without auth",
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-15"
 }
 

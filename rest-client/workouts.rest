@@ -3,7 +3,7 @@ GET https://cse341-project3.onrender.com/workouts
 Content-Type: application/json
 
 ### Get workout by ID
-GET https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+GET https://cse341-project3.onrender.com/workouts/687c0d9e10551d383d1bc7ae
 Content-Type: application/json
 
 ### Create workout (requires authentication)
@@ -11,7 +11,7 @@ POST https://cse341-project3.onrender.com/workouts
 Content-Type: application/json
 
 {
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-15",
   "type": "strength",
   "duration": 60,
@@ -25,49 +25,7 @@ POST https://cse341-project3.onrender.com/workouts
 Content-Type: application/json
 
 {
-  "userId": "USER_ID_HERE",
-  "date": "2025-01-16",
-  "type": "cardio",
-  "duration": 45,
-  "exercises": ["Running", "Cycling"],
-  "notes": "Good cardio session, maintained steady pace",
-  "caloriesBurned": 420
-}
-
-### Create workout (requires authentication)
-POST https://cse341-project3.onrender.com/workouts
-Content-Type: application/json
-
-{
-  "userId": "USER_ID_HERE",
-  "date": "2025-01-17",
-  "type": "mixed",
-  "duration": 75,
-  "exercises": ["Deadlift", "Bench Press", "Treadmill"],
-  "notes": "Combined strength and cardio training",
-  "caloriesBurned": 480
-}
-
-### Create workout (requires authentication)
-POST https://cse341-project3.onrender.com/workouts
-Content-Type: application/json
-
-{
-  "userId": "USER_ID_HERE",
-  "date": "2025-01-18",
-  "type": "strength",
-  "duration": 50,
-  "exercises": ["Squats", "Lunges", "Planks"],
-  "notes": "Focused on lower body and core",
-  "caloriesBurned": 300
-}
-
-### Create workout (requires authentication)
-POST https://cse341-project3.onrender.com/workouts
-Content-Type: application/json
-
-{
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-19",
   "type": "cardio",
   "duration": 30,
@@ -77,11 +35,11 @@ Content-Type: application/json
 }
 
 ### Update workout (requires authentication)
-PUT https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+PUT https://cse341-project3.onrender.com/workouts/687c0d9e10551d383d1bc7b1
 Content-Type: application/json
 
 {
-  "userId": "USER_ID_HERE",
+  "userId": "687c0bb44ff82a003aec9c94",
   "date": "2025-01-15",
   "type": "strength",
   "duration": 75,
@@ -91,14 +49,14 @@ Content-Type: application/json
 }
 
 ### Delete workout (requires authentication)
-DELETE https://cse341-project3.onrender.com/workouts/WORKOUT_ID_HERE
+DELETE https://cse341-project3.onrender.com/workouts/687c0d9e10551d383d1bc7b1
 
 ### Test validation error - missing required fields
 POST https://cse341-project3.onrender.com/workouts
 Content-Type: application/json
 
 {
-  "userId": "USER_ID_HERE",
+  "userId": "687c0b64ff02a003aec5c95",
   "date": "2025-01-15",
   "type": "strength"
 }

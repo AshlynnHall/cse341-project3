@@ -11,20 +11,6 @@ POST https://cse341-project3.onrender.com/users
 Content-Type: application/json
 
 {
-  "name": "John Smith",
-  "email": "john.smith@example.com",
-  "age": 28,
-  "gender": "male",
-  "height": 180.5,
-  "weight": 75.2,
-  "joinedDate": "2025-01-15"
-}
-
-### Create a new user
-POST https://cse341-project3.onrender.com/users
-Content-Type: application/json
-
-{
   "name": "Sarah Johnson",
   "email": "sarah.johnson@example.com",
   "age": 32,
@@ -49,7 +35,7 @@ Content-Type: application/json
 }
 
 ### Update user (requires authentication)
-PUT https://cse341-project3.onrender.com/users/USER_ID_HERE
+PUT https://cse341-project3.onrender.com/users/687c0b64ff02a003aec5c95
 Content-Type: application/json
 
 {
@@ -63,7 +49,7 @@ Content-Type: application/json
 }
 
 ### Delete user (requires authentication)
-DELETE https://cse341-project3.onrender.com/users/USER_ID_HERE
+DELETE https://cse341-project3.onrender.com/users/687f09b7c8937f68e6ff15b9
 
 
 ### Test validation error - missing required fields
