@@ -3,7 +3,7 @@ GET https://cse341-project3.onrender.com/users
 Content-Type: application/json
 
 ### Get user by ID 
-GET https://cse341-project3.onrender.com/users/USER_ID_HERE
+GET https://cse341-project3.onrender.com/users/687c0bf04ff82a003aec9c95
 Content-Type: application/json
 
 ### Create a new user
@@ -11,38 +11,24 @@ POST https://cse341-project3.onrender.com/users
 Content-Type: application/json
 
 {
-  "name": "Sarah Johnson",
-  "email": "sarah.johnson@example.com",
-  "age": 32,
-  "gender": "female",
-  "height": 165.0,
-  "weight": 58.5,
-  "joinedDate": "2025-01-10"
-}
-
-### Create a new user
-POST https://cse341-project3.onrender.com/users
-Content-Type: application/json
-
-{
-  "name": "Mike Wilson",
-  "email": "mike.wilson@example.com",
-  "age": 35,
-  "gender": "male",
+  "name": "Fergie Johnson",
+  "email": "fergie.johnson@example.com",
+  "age": 56,
+  "gender": "Female",
   "height": 175.0,
   "weight": 82.0,
-  "joinedDate": "2025-01-08"
+  "joinedDate": "2025-01-12"
 }
 
 ### Update user (requires authentication)
-PUT https://cse341-project3.onrender.com/users/687c0b64ff02a003aec5c95
+PUT https://cse341-project3.onrender.com/users/687c0bf04ff82a003aec9c95
 Content-Type: application/json
 
 {
-  "name": "John Smith Updated",
-  "email": "john.updated@example.com",
-  "age": 29,
-  "gender": "male",
+  "name": "Sylisa Hall",
+  "email": "sylisa.hall@example.com",
+  "age": 23,
+  "gender": "Female",
   "height": 181.0,
   "weight": 74.0,
   "joinedDate": "2025-01-15"

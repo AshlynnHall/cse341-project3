@@ -83,8 +83,8 @@ function ensureAuthenticated(req, res, next) {
   res.status(401).json({ error: 'Unauthorized' });
 }
 
-// Protect POST/PUT/DELETE routes for workouts, exercises, goals
-app.use(['/workouts', '/exercises', '/goals'], (req, res, next) => {
+// Protect POST/PUT/DELETE routes for users, workouts, exercises, goals
+app.use(['/users', '/workouts', '/exercises', '/goals'], (req, res, next) => {
   if (['POST', 'PUT', 'DELETE'].includes(req.method)) {
     return ensureAuthenticated(req, res, next);
   }
